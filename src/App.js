@@ -7,7 +7,6 @@ import Nav from "./pages/Nav";
 function App() {
   return (
     <>
-      <Nav />
       <Header />
       <Main />
       <Footer />
