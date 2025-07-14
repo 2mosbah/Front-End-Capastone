@@ -1,29 +1,21 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BookingPage from "../pages/BookingPage";
+import App from "../App";
+import NotFoundPage from "../pages/NotFoundPage";
+import { BookingProvider } from "../contexts/BookingProvider";
+import ConfirmedBooking from "../pages/ConfirmedBooking";
 
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Menu from "../pages/Menu";
-import Reservations from "../pages/Reservations";
-import Order from "../pages/Order";
-import Login from "../pages/Login";
-import NotFound from "../pages/NotFound";
-
-const AppRoutes = () => {
-  return (
+const AppRoutes = () => (
+  <BookingProvider>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/reservations" element={<Reservations />} />
-        <Route path="/order" element={<Order />} />
-        <Route path="/login" element={<Login />} />
-
-        {/* Catch-all route for 404 */}
-        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<App />}></Route>
+        <Route path="reservations" element={<BookingPage />} />
+        <Route path="confirmed" element={<ConfirmedBooking />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
-  );
-};
+  </BookingProvider>
+);
 
 export default AppRoutes;

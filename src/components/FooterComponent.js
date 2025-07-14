@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/Logo.png";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
+import { HashLink } from "react-router-hash-link";
 
 export default function FooterComponent() {
   const footerRef = useRef(null);
@@ -19,7 +20,7 @@ export default function FooterComponent() {
   return (
     <footer
       ref={footerRef}
-      className="bg-[#333333] rounded-t-[16px] shadow-sm border-t border-gray-300 max-w-7xl mx-auto mt-16 px-8 py-12 flex flex-col md:flex-row items-center md:items-start gap-8 transition-all duration-700 ease-out opacity-0 translate-y-8"
+      className="bg-[#333333] rounded-t-[16px] shadow-sm border-t border-gray-300 max-w-8xl mx-auto mt-16 px-8 py-12 flex flex-col md:flex-row items-center md:items-start gap-8 transition-all duration-700 ease-out opacity-0 translate-y-8"
       style={{ willChange: "transform, opacity" }}
     >
       {/* Logo or image */}
@@ -52,20 +53,20 @@ export default function FooterComponent() {
               </Link>
             </li>
             <li>
-              <Link
-                to="/about"
+              <HashLink
+                to="/#about"
                 className="text-gray-100 hover:text-[#F4CE14] font-medium transition-colors"
               >
                 About
-              </Link>
+              </HashLink>
             </li>
             <li>
-              <Link
-                to="/menu"
+              <HashLink
+                to="/#menu"
                 className="text-gray-100 hover:text-[#F4CE14] font-medium transition-colors"
               >
                 Menu
-              </Link>
+              </HashLink>
             </li>
             <li>
               <Link

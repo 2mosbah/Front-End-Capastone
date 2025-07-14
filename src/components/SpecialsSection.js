@@ -4,7 +4,7 @@ import specials from "../data/specialsData";
 
 export default function SpecialsSection() {
   return (
-    <section className="py-16 px-4 bg-white">
+    <section id="menu" className="py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10 gap-6">
           <h2

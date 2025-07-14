@@ -16,26 +16,27 @@ export default function AboutSection() {
 
   return (
     <section
+      id="about"
       ref={sectionRef}
-      className="bg-[#F4F4F4] rounded-[16px] shadow-sm border border-gray-300 flex flex-col md:flex-row items-center max-w-6xl mx-auto my-12 px-8 py-12 transition-all duration-700 ease-out opacity-0 translate-y-8"
+      className="bg-[#F4F4F4] rounded-[16px] shadow-sm border sm:items-center border-gray-300 flex flex-col md:flex-row md:justify-between max-w-8xl mx-auto my-12 px-8 py-12 transition-all duration-700 ease-out opacity-0 translate-y-8"
       style={{ willChange: "transform, opacity" }}
     >
       {/* Left: Text */}
       <div className="flex-1 md:pr-12 mb-8 md:mb-0">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">Little Lemon</h1>
         <h2 className="text-2xl font-semibold text-gray-600 mb-6">Chicago</h2>
-        <p className="text-[#495E57] text-base font-medium mb-4">
+        <p className="text-[#495E57] text-base font-medium mb-4 lg:w-[500px]">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. Exercitation
           veniam consequat sunt nostrud amet.
         </p>
-        <p className="text-[#495E57] text-base font-medium">
+        <p className="text-[#495E57] text-base font-medium lg:w-[500px]">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit.
         </p>
       </div>
       {/* Right: Overlapping Images */}
-      <div className="flex-1 flex justify-center items-center relative min-w-[320px] min-h-[260px]">
+      <div className="flex flex-1 justify-center items-center relative min-w-[320px] min-h-[260px] md:flex-none md:mx-20">
         {/* Back image */}
         <div className="absolute left-0 top-12 w-56 h-56 bg-gray-300 rounded-lg shadow-md border border-gray-300 -z-10 transition-transform duration-500 hover:scale-105">
           <img

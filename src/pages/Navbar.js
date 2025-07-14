@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { X, Menu } from "lucide-react";
 import logo from "../assets/Logo.png";
+import { HashLink } from "react-router-hash-link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,18 +28,18 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <Link
-              to="/about"
+            <HashLink
+              to="/#about"
               className="text-gray-800 hover:text-yellow-600 transition"
             >
               About
-            </Link>
-            <Link
-              to="/menu"
+            </HashLink>
+            <HashLink
+              to="/#menu"
               className="text-gray-800 hover:text-yellow-600 transition"
             >
               Menu
-            </Link>
+            </HashLink>
             <Link
               to="/reservations"
               className="text-gray-800 hover:text-yellow-600 transition"
